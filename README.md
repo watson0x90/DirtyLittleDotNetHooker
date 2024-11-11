@@ -152,3 +152,6 @@ Interceptor.attach(functionAddress, {
 ## Additional Info & Links
 - https://github.com/FuzzySecurity/Fermion
 - https://labs.calypso.pub/windows-instrumentation-with-frida
+
+![image](https://github.com/user-attachments/assets/d4528833-db77-4fe3-b2f0-85ced9e96fa0)
+
