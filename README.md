@@ -15,6 +15,7 @@ Find .Net Functions to use with Frida and Fermion.
 
 2. Add the following Nuget Package to the project:
     - https://www.nuget.org/packages/dllexport
+    - This project depends on version `1.7.4`. New versions will produce bugs.
 
 3. You wil then see a new popup window to configure the project using the DLLExport GUI. Set the following options:
     - Note: Ensure that your options look exact 
@@ -145,6 +146,7 @@ Interceptor.attach(functionAddress, {
 
 ##  Known Issues
 -  Need to figure out how to unload the DLL after it is used. Right now it is loaded into the process and will stay there.
+- Need to figure out the DLLExport issues with versions later than `1.7.4`
 
 ## Additional Info & Links
 - https://github.com/FuzzySecurity/Fermion
