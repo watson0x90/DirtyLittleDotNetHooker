@@ -25,30 +25,29 @@ Find .Net Functions to use with Frida and Fermion.
 4. Copy and Past the code from the FunctionEnumerator.cs code into Visual Studio
 
 5. Build the project!
-    - It is fine to leave the buid as "Debug"
+    - Leave the build as "Debug"
 
 
-## How to use with Ferion 
+## How to use with Fermion 
+0. Get a copy of Fermion from:
+    - https://github.com/FuzzySecurity/Fermion
 
-1. Open the lovely Fermion tool, and paste in the `fermion_dotnet_hooking_script.js` script
+1. Open the lovely Fermion tool, and paste in the `enumerate_functions.js` script
 
-2. Change the approrpiate values for the `dllPath`, `targetAssemblyPath`, and `funcName`
+2. Change the approrpiate values for the `dllPath`, `targetAssemblyPath`, and `outputDirectory`
 
-3. Attach to the process and the script will run
+3. Attach to the .NET process and the script will run
 
-4. The output in the text area will include the address of the function
+4. A CSV file will be created in your `outputDirectory` for you to review.
 
-![image](https://github.com/user-attachments/assets/ed5506f0-f967-4ba3-8440-f39db900737b)
+5. Open the hook_and_read.js script in to Fermion
 
-5. Now you can comment out the `findFunc()` and uncomment `hookAtAddr()`
-
-6. Change the address with the acutally memory address from your output
+6. At the bottom of the script, enter in the memory address, function name, and a bool for if this is a static or instance function.
 
 7. Watch the beautiful interception happen!!
 
-![image](https://github.com/user-attachments/assets/23444bf8-e24f-45c2-82b4-1bec2a8a4297)
 
-## How to read variables
+## The fun of function types
 
 - Instance Function
 - Static Function
@@ -93,9 +92,7 @@ Adding in a helper function to read the dotnet string, I was able to return the 
 ![image](https://github.com/user-attachments/assets/0dbf419a-d3da-4eb2-becc-16f96e89b994)
 
 
-The code is reference in `read_dotnet_variable.js`
-
-I will still need to research to determine what happens if I take in multiple parameters of different types, but this is still very interesting. 
+The process now for reading variables is much easier in the new `hook_and_read.js` script.
 
 ## Static Functions
 

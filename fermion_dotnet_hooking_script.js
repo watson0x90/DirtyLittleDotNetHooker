@@ -1,3 +1,9 @@
+/*
+
+This is the original script and will no longer work, but I wanted to leave it here for an example. 
+
+*/
+
 function findFunc(){
     // Load the custom C# DLL from your build path
     const dllPath = "C:\\Users\\User\\source\\repos\\FunctionEnumerator\\FunctionEnumerator\\bin\\Debug\\x64\\FunctionEnumerator.dll";
